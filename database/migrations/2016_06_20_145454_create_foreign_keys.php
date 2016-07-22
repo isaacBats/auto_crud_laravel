@@ -8,8 +8,8 @@ class CreateForeignKeys extends Migration {
 
 	public function up()
 	{
-		Schema::table('users', function(Blueprint $table) {
-			$table->foreign('avatar_id')->references('id')->on('media')
+		Schema::table('cd_users', function(Blueprint $table) {
+			$table->foreign('avatar_id')->references('id')->on('cd_media')
 						->onDelete('restrict')
 						->onUpdate('restrict');
 		});
@@ -17,7 +17,7 @@ class CreateForeignKeys extends Migration {
 
 	public function down()
 	{
-		Schema::table('users', function(Blueprint $table) {
+		Schema::table('cd_users', function(Blueprint $table) {
 			$table->dropForeign('users_avatar_id_foreign');
 		});
 	}

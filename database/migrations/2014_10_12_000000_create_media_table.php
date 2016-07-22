@@ -7,7 +7,7 @@ class CreateMediaTable extends Migration {
 
     public function up()
     {
-        Schema::create('media', function(Blueprint $table) {
+        Schema::create('cd_media', function(Blueprint $table) {
             $table->increments('id');
             $table->string('name', 250)->nullable();
             $table->string('type', 100);
@@ -19,6 +19,6 @@ class CreateMediaTable extends Migration {
 
     public function down()
     {
-        Schema::drop('media');
+        Schema::drop('cd_media');
     }
 }
