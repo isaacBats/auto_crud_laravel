@@ -1,0 +1,214 @@
+@import 'variables.less';
+
+
+/*   Buttons
+---------------------------------------------------------------------------------------------- */
+.btn
+{
+	border-radius: 0;
+	color: #ffffff;
+	font-family: @contentFont;
+	font-size: 14px;
+	font-weight: 300;
+	outline: 0;	
+	font-family: @contentFont;
+	margin-bottom: 5px;
+	&:hover, &:focus, &:active
+	{
+		-webkit-transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+		outline: 0 !important;		
+	}
+	&.btn-radius
+	{
+		border-radius: 3px;
+	}
+	&.btn-rounded
+	{
+		border-radius: 30px;
+	}
+}
+.btn-group
+{
+	margin-bottom: 5px;
+	.btn-default {
+	 	border: 1px solid darken(@borderColor,10%);
+	}
+}
+.btn-primary   
+{ 
+	background-color: @primaryColor;
+	border-color: darken(@primaryColor,5%);		
+	&:hover, &:focus, &:active
+	{		
+		background-color: darken(@primaryColor,10%);
+		border-color: darken(@primaryColor,5%);				
+	}
+}
+.btn-success   
+{ 
+	background-color: @success;	
+	border-color: darken(@success,5%);		
+	&:hover, &:focus, &:active
+	{		
+		background-color: darken(@success,10%);
+		border-color: darken(@success,5%);		
+	}
+}
+.btn-info   
+{ 
+	background-color: @info;	
+	border-color: darken(@info,5%);			
+	&:hover, &:focus, &:active
+	{		
+		background-color: darken(@info,10%);
+		border-color: darken(@info,5%);		
+	}
+}
+.btn-warning   
+{ 
+	background-color: @warning;	
+	border-color: darken(@warning,5%);	
+	&:hover, &:focus, &:active
+	{		
+		background-color: darken(@warning,10%);
+		border-color: darken(@warning,5%);	
+	}
+}
+.btn-danger   
+{ 
+	background-color: @danger;	
+	border-color: darken(@danger,5%);	
+	&:hover, &:focus, &:active
+	{		
+		background-color: darken(@danger,10%);
+		border-color: darken(@danger,5%);	
+	}
+}
+
+.btn-grey   
+{ 
+	background-color: @grey;
+	border-color: darken(@grey,5%);	
+	&:hover, &:focus, &:active
+	{		
+		background-color: darken(@grey,10%);
+		color: #FFFFFF;
+		border-color: darken(@grey,5%);	
+	}
+}
+.btn-default
+{ 
+	background-color: #FFFFFF;
+	color: @headingColor;
+	border:1px solid @borderColor;	
+	&:hover, &:focus, &:active
+	{		
+		background-color: darken(#FFFFFF,10%);
+	}
+}
+
+
+
+.btn-default.disabled, .btn-default.disabled.active, .btn-default.disabled.focus, .btn-default.disabled:active, .btn-default.disabled:focus, .btn-default.disabled:hover, .btn-default[disabled], .btn-default[disabled].active, .btn-default[disabled].focus, .btn-default[disabled]:active, .btn-default[disabled]:focus, .btn-default[disabled]:hover, fieldset[disabled] .btn-default, fieldset[disabled] .btn-default.active, fieldset[disabled] .btn-default.focus, fieldset[disabled] .btn-default:active, fieldset[disabled] .btn-default:focus, fieldset[disabled] .btn-default:hover
+{
+	background-color: darken(@borderColor,8%);
+}
+
+
+
+
+/*dropdowns*/
+
+.btn-primary.active, .btn-primary.focus, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .open>.dropdown-toggle.btn-primary
+{
+	background-color: darken(@primaryColor,10%);		
+}
+.btn-success.active, .btn-success.focus, .btn-success:active, .btn-success:focus, .btn-success:hover, .open>.dropdown-toggle.btn-success
+{
+	background-color: darken(@success,10%);		
+}
+.btn-info.active, .btn-info.focus, .btn-info:active, .btn-info:focus, .btn-info:hover, .open>.dropdown-toggle.btn-info
+{
+	background-color: darken(@info,10%);
+}
+.btn-danger.active, .btn-danger.focus, .btn-danger:active, .btn-danger:focus, .btn-danger:hover, .open>.dropdown-toggle.btn-danger
+{
+	background-color: darken(@danger,10%);
+}
+.btn-warning.active, .btn-warning.focus, .btn-warning:active, .btn-warning:focus, .btn-warning:hover, .open>.dropdown-toggle.btn-warning
+{
+	background-color: darken(@warning,10%);
+}
+.btn-default.active, .btn-default.focus, .btn-default:active, .btn-default:focus, .btn-default:hover, .open>.dropdown-toggle.btn-default
+{
+	background-color: darken(#FFFFFF,10%);
+}
+
+/*loading button effects*/
+@-webkit-keyframes ld {
+  0%   { transform: rotate(0deg) scale(1); }
+  50%  { transform: rotate(180deg) scale(1.1); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+@-moz-keyframes ld {
+  0%   { transform: rotate(0deg) scale(1); }
+  50%  { transform: rotate(180deg) scale(1.1); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+@-o-keyframes ld {
+  0%   { transform: rotate(0deg) scale(1); }
+  50%  { transform: rotate(180deg) scale(1.1); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+@keyframes ld {
+  0%   { transform: rotate(0deg) scale(1); }
+  50%  { transform: rotate(180deg) scale(1.1); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+.btn-progress {
+    position: relative;
+    opacity: .8;
+    color: transparent !important;
+    text-shadow: none !important;
+}
+
+.btn-progress:hover,
+.btn-progress:active,
+.btn-progress:focus {
+    cursor: default;
+    color: transparent;
+    outline: none !important;
+    box-shadow: none;
+}
+
+.btn-progress:before {
+    content: '';
+    
+    display: inline-block;
+    
+    position: absolute;
+    background: transparent;
+    border: 1px solid #fff;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    
+    box-sizing: border-box;
+    
+    top: 50%;
+    left: 50%;
+    margin-top: -12px;
+    margin-left: -12px;
+    
+    width: 24px;
+    height: 24px;
+    
+    -webkit-animation: ld 1s ease-in-out infinite;
+    -moz-animation:    ld 1s ease-in-out infinite;
+    -o-animation:      ld 1s ease-in-out infinite;
+    animation:         ld 1s ease-in-out infinite;
+}

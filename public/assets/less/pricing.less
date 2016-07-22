@@ -1,0 +1,161 @@
+@import 'variables.less';
+
+
+/*******************   Contents    *******************
+*  
+*  1. Pricing
+---------------------------------------------------------------------------------------------- */
+
+
+
+/*   Pricing
+---------------------------------------------------------------------------------------------- */
+.pricing
+{
+    border: 1px solid @borderColor;
+    margin: 10px;
+    .pricing-header
+    {
+        color: @leftBarBg;
+        font-family: @headingFont;
+        font-size: 22px;
+        font-weight: 500;
+        letter-spacing: 0.25px;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 20px 10px;
+        background-color: #ffffff;
+        word-wrap: break-word;
+        position: relative;
+        .recommended
+        {
+            position: absolute;
+            top: -13px;
+            right: -13px;
+            i
+            {
+                background-color: @primaryColor;
+                padding: 6px 8px;
+                color: #ffffff;
+                font-size: 18px;
+            }
+        }
+    }
+    .pricing-price
+    {
+        color: #ffffff;
+        font-family: @contentFont;
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: 0.25px;
+        text-align: center;
+        padding: 20px 0px;
+        background-color: @primaryColor;
+        span
+        {
+            font-size: 14px;
+            font-weight: 400;
+        }
+        &.pricing-recommended-price
+        {
+            background-color: @leftBarBg;
+        }
+    }
+    .pricing-features
+    {
+        margin: 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: #ffffff;
+        li
+        {
+            color: @contentColor;
+            font-family: @contentFont;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.25px;
+            text-transform: capitalize;
+            text-align: center;
+            padding: 8px;
+            span
+            {
+                color: @headingColor;
+                font-weight: 600;
+            }
+        }
+    }
+    &.pricing-two
+    {
+        background-color: @leftBarBg;
+        .pricing-header
+        {
+            background-color: transparent;
+            color: #ffffff;
+        }
+        .pricing-price
+        {
+            &.pricing-recommended-price
+            {
+                color: @leftBarBg;
+                background-color: #ffffff;
+            }
+        }
+        .pricing-features
+        {
+            background-color: transparent;
+            li
+            {
+                color: #ffffff;
+                span
+                {
+                    color: @submenuLinksColor;
+                }
+            }
+        }
+    }
+    &.pricing-three
+    {
+        margin: 0;
+        width: 24%;
+        display: inline-block;
+        margin-bottom: 20px;
+        .pricing-header
+        {
+            background-color: @leftBarBg;
+            color: #ffffff;
+            .recommended
+            {
+                top: -1px;
+                right: 0;
+            }
+        }
+        .pricing-price
+        {
+            &.pricing-recommended-price
+            {
+                border-top: 1px solid @borderColor;
+            }
+        }
+    }
+}
+@media (min-width: 768px) and (max-width: 992px)
+{
+    .pricing
+    {
+        &.pricing-three
+        {
+            width: 48%;
+        }
+    }
+}
+@media (max-width: 768px)
+{
+    .pricing
+    {
+        &.pricing-three
+        {
+            display: block;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,412 @@
+@import 'variables.less';
+
+
+
+/*******************   Contents    *******************
+*  
+*  1. Panel Heading
+*  2. Info Boxes 1
+*  3. Info Boxes 2
+*  4. Info Boxes 3
+---------------------------------------------------------------------------------------------- */
+
+
+
+/*   Panel Heading
+---------------------------------------------------------------------------------------------- */
+.paneltype-heading
+{
+    color: @headingColor;
+    font-family: @headingFont;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.25px;
+    text-transform: capitalize;
+    line-height: 26px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+
+
+/*   Info Boxes 1
+---------------------------------------------------------------------------------------------- */
+
+.primary-info-icon
+{
+    color: @primaryColor;
+}
+.red-info-icon
+{
+    color: @danger;
+}
+.yellow-info-icon
+{
+    color: @warning;
+}
+.green-info-icon
+{
+    color: @success;
+}
+
+.primarybg-info
+{
+    background-color: @primaryColor;
+}
+.redbg-info
+{
+    background-color: @danger;
+    
+}
+.yellowbg-info
+{
+    background-color: @warning;
+}
+.bluebg-info
+{
+    background-color: @info;
+}
+.greenbg-info
+{
+    background-color: @success;
+}
+
+.info-one
+{
+    margin-bottom: 20px;
+    padding-top: 50px;
+    padding-bottom: 25px;
+    color: #ffffff;
+    font-family: @contentFont;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+    line-height: 24px;
+    text-align: center;
+    >.logo
+    {
+        padding-bottom: 40px;
+        i
+        {
+            font-size: 52px;
+            color: #ffffff;
+        }
+    }
+    p
+    {
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 0px;
+    }
+}
+
+
+
+/*   Info Boxes 2
+---------------------------------------------------------------------------------------------- */
+.info-two
+{
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    .info-text
+    {
+        color: @contentColor;
+        font-family: @contentFont;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0.25px;
+        line-height: 24px;
+        padding: 20px 10px 80px;
+    }
+    .info-bottom
+    {
+        border-top: 1px solid @borderColor;
+        ul
+        {
+            margin-bottom: 0px;
+            padding: 10px;
+            li
+            {
+                a
+                {
+                    text-decoration: none;
+                    i
+                    {
+                        font-size: 16px;
+                        color: #cccccc;
+                    }
+                }
+                
+            }
+        }
+        &.primary-bottom
+        {
+            border-bottom: 4px solid @primaryColor;
+        }
+        &.red-bottom
+        {
+            border-bottom: 4px solid @danger;
+        }
+        &.yellow-bottom
+        {
+            border-bottom: 4px solid @warning;
+        }
+        &.green-bottom
+        {
+            border-bottom: 4px solid @success;
+        }
+    }
+}
+
+
+
+/*   Info Boxes 3
+---------------------------------------------------------------------------------------------- */
+.info-three
+{
+    margin-bottom: 20px;
+    padding: 20px;
+    color: #ffffff;
+    font-family: @contentFont;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+    line-height: 24px;
+    position: relative;
+    .logo-three
+    {
+        float: right;
+        transform: rotate(30deg);
+        -ms-transform: rotate(30deg); /* IE 9 */
+        -webkit-transform: rotate(30deg); /* Chrome, Safari, Opera */
+        i
+        {
+            font-size: 46px;
+            &.dark-info-green
+            {
+                color: darken(@success,10%);                
+            }
+            &.dark-info-red
+            {
+                color: darken(@danger,20%);                
+            }
+            &.dark-info-yellow
+            {
+                color: darken(@warning,15%);                
+            }
+            &.dark-info-primary
+            {
+                color: darken(@primaryColor,15%);                
+            }
+            &.dark-info-blue
+            {
+                color: darken(@info,15%);                
+            }
+        }
+    }
+    p
+    {
+        margin-bottom: 0px;
+        font-size: 14px;
+        font-weight: 600;
+    }
+}
+
+
+
+/*   Info Boxes 4
+---------------------------------------------------------------------------------------------- */
+.info-four
+{
+    background-color: #ffffff;
+    padding: 15px 0px;
+    .logo-four
+    {
+        float: left;
+        padding-left: 15px;
+        padding-top: 6px;
+        i
+        {
+            font-size: 36px;
+        }
+    }
+    .info-four-content
+    {
+        margin-left: 60px;
+        color: @headingColor;
+        font-family: @contentFont;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 0.25px;
+        line-height: 24px;
+        p
+        {
+            margin-bottom: 0px;
+            color: @contentColor;
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+    &.primary-left
+    {
+        border-left: 3px solid @primaryColor;
+    }
+    &.red-left
+    {
+        border-left: 3px solid @danger;
+    }
+    &.yellow-left
+    {
+        border-left: 3px solid @warning;
+    }
+    &.green-left
+    {
+        border-left: 3px solid @success;
+    }
+}
+
+
+
+/*   Info Boxes 5
+---------------------------------------------------------------------------------------------- */
+.info-five
+{
+    margin-bottom: 10px;
+    .info-top
+    {
+        position: relative;
+        .info-img
+        {
+            img
+            {
+                width: 100%;
+            }
+            &.image-border-red
+            {
+                border: 4px solid @danger;
+            }
+            &.image-border-green
+            {
+                border: 4px solid @success;
+            }
+            &.image-border-yellow
+            {
+                border: 4px solid @warning;
+            }
+        }
+        .info-social
+        {
+            position: absolute;
+            top: 4px;
+            right: 4px;
+            background-color: rgba(255,255,255,0.6);
+            text-align: center;
+            li
+            {
+                padding: 5px 8px;
+                a
+                {
+                    text-decoration: none;
+                    color: #cccccc;
+                    i
+                    {
+                        font-size: 18px;
+                    }
+                    &:hover
+                    {
+                        color: @headingColor;
+                    }
+                }
+            }
+        }
+    }
+    .info-bottom-five
+    {
+        padding: 30px;
+        text-align: center;
+        .info-bottom-head
+        {
+            color: #ffffff;
+            font-family: @headingFont;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 0.25px;
+            line-height: 26px;
+            padding-bottom: 15px;
+        }
+        .info-bottom-content
+        {
+            color: #ffffff;
+            font-family: @contentFont;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.25px;
+            line-height: 22px;
+        }
+    }
+}
+
+
+/*   Info Boxes 6
+---------------------------------------------------------------------------------------------- */
+
+/*   Info Boxes 3
+---------------------------------------------------------------------------------------------- */
+.info-six
+{
+    margin-top: 7px;
+    margin-bottom: 18px;
+    padding: 20px;
+    color: #ffffff;
+    font-family: @contentFont;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+    line-height: 24px;
+    position: relative;
+    .info-icon
+    {
+        float: left;
+        background-color: white;
+        width: 50px;
+        height: 50px;
+        border-radius:50px;
+        text-align: center;
+
+        
+        i
+        {
+            font-size: 24px;
+            line-height: 50px;
+            &.dark-info-green
+            {
+                color: darken(@success,10%);                
+            }
+            &.dark-info-red
+            {
+                color: darken(@danger,20%);                
+            }
+            &.dark-info-yellow
+            {
+                color: darken(@warning,15%);                
+            }
+            &.dark-info-primary
+            {
+                color: darken(@primaryColor,15%);                
+            }
+        }
+    }
+    .number
+    {
+        margin-left: 10px;
+        font-size: 28px;
+    }
+    p
+    {
+        margin-bottom: 0px;
+        margin-left: 60px;
+        font-size: 12px;
+        font-weight: 600;
+    }
+}
+

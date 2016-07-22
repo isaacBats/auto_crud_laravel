@@ -1,0 +1,310 @@
+@import 'variables.less';
+
+
+/****************************************************
+                        Tabs
+****************************************************/
+.knot-tabs
+{
+    border-bottom: 1px solid @borderColor;
+    >li
+    {
+        a
+        {
+            border-radius: 0px;
+            background-color: @mainBg;
+            color: @headingColor;
+            font-family: @contentFont;
+            font-size: 15px;
+            font-weight: 300;
+            letter-spacing: 0.25px;
+            text-transform: capitalize;
+            &:hover, &:focus, &:active
+            {
+                background-color: @mainBg;
+                border: 1px solid transparent;
+                color: @primaryColor;
+            }
+        }
+        &.active
+        {
+            a
+            {
+                border: 1px solid @borderColor;
+                border-bottom: 1px solid transparent;
+                border-radius: 0px;
+                color: @headingColor;
+                font-family: @contentFont;
+                font-size: 15px;
+                font-weight: 400;
+                letter-spacing: 0.25px;
+                text-transform: capitalize;
+                &:hover, &:focus, &:active
+                {
+                    border: 1px solid @borderColor;
+                    border-bottom: 1px solid transparent;
+                }
+            }
+        }
+    }
+    &.right-tabs
+    {
+        li
+        {
+            float: right;
+        }
+    }
+    &.nav-justified
+    {
+        li
+        {
+            border-bottom: 1px solid @borderColor;
+            a
+            {
+                border-radius: 0px;
+                border-bottom: 1px solid transparent;
+                color: @headingColor;
+                margin-left: 5px;
+                &:hover, &:focus
+                {
+                    border: 1px solid transparent;
+                    color: @primaryColor;
+                }
+                &.active
+                {
+                    border-bottom: 1px solid transparent;
+                }
+            }
+            &.active
+            {
+                border-bottom: 1px solid transparent;
+                a
+                {
+                    color: @headingColor;
+                    border: 1px solid @borderColor;
+                    border-bottom: 1px solid transparent;
+                    &:hover, &:focus, &:active
+                    {
+                        border: 1px solid @borderColor;
+                        border-bottom: 1px solid transparent;
+                    }
+                }
+            }
+        }
+    }
+    &.knot-noborder
+    {
+        border-bottom: 1px solid transparent;
+        >li
+        {
+            a
+            {
+                border-radius: 0px;
+                background-color: @mainBg;
+                border: 1px solid transparent;
+                &:hover, &:focus, &:active
+                {
+                    background-color: @mainBg;
+                    border: 1px solid transparent;
+                    color: @primaryColor;
+                }
+            }
+            &.active
+            {
+                a
+                {
+                    border: 1px solid transparent;
+                    border-radius: 0px;
+                    background-color: @borderColor;
+                    color: @headingColor;
+                    font-family: @contentFont;
+                    font-size: 15px;
+                    font-weight: 400;
+                    letter-spacing: 0.25px;
+                    text-transform: capitalize;
+                    &:hover, &:focus, &:active
+                    {
+                        border: 1px solid transparent;
+                    }
+                }
+            }
+        }
+        &.nav-justified
+        {
+            li
+            {
+                border-bottom: 1px solid transparent;
+            }
+        }
+    }
+    &.knot-vertical-tabs
+    {
+        display: block;
+        border-bottom: 1px solid transparent;
+        >li
+        {
+            width: 100%;
+            margin-bottom: 5px;
+            &.active
+            {
+                a
+                {
+                    border: 1px solid @borderColor;
+                    border-right: 1px solid transparent;
+                    &:hover, &:focus
+                    {
+                        border: 1px solid @borderColor;
+                        border-right: 1px solid transparent;
+                    }
+                    &.active
+                    {
+                        border-right: 1px solid transparent;
+                    }
+                }
+            }
+        }
+    }
+    &.knot-vertical-tabs-right
+    {
+        >li
+        {
+            &.active
+            {
+                a
+                {
+                    border: 1px solid @borderColor;
+                    border-left: 1px solid transparent;
+                    &:hover, &:focus
+                    {
+                        border: 1px solid @borderColor;
+                        border-left: 1px solid transparent;
+                    }
+                    &.active
+                    {
+                        border-left: 1px solid transparent;
+                    }
+                }
+            }
+        }
+    }
+    &.widget-tabs
+    {
+        border-bottom: 0px;
+        >li
+        {
+            text-align: center;
+            a
+            {
+                background-color: #ffffff;
+                margin: 0px;
+                &:hover
+                {
+                    background-color: #ffffff;
+                    color: @success;
+                }
+            }
+            &.active
+            {
+                a
+                {
+                    background-color: #ffffff;
+                    color: @success;
+                    font-weight: 300;
+                }
+            }
+        }
+        &.nav-justified
+        {
+            li
+            {
+                border-bottom: 0px;
+            }
+        }
+    }
+}
+.knot-tab-content
+{
+    >.tab-pane
+    {
+        color: @contentColor;
+        font-family: @contentFont;
+        font-size: 13px;
+        font-weight: 300;
+        letter-spacing: 0.25px;
+        line-height: 24px;
+        padding-top: 14px;
+    }
+    &.vertical-content
+    {
+        >.tab-pane
+        {
+            padding-top: 0px;
+        }
+    }
+}
+b
+{
+    font-weight: 400;
+}
+/****************************************************
+                        AccordionsTabs
+****************************************************/
+.knot-accordion
+{
+    .panel
+    {
+        border-radius: 0px;
+        box-shadow: none;
+        border: 1px solid @borderColor;
+        .panel-heading
+        {
+            background-color: @mainBg;
+            border-radius: 0px;
+            .panel-title
+            {
+                a
+                {
+                    color: @headingColor;
+                    font-family: @contentFont;
+                    font-size: 14px;
+                    font-weight: 400;
+                    letter-spacing: 0.25px;
+                    text-transform: capitalize;
+                    text-decoration: none;
+                    display: block;
+                }
+            }
+        }
+        .panel-body
+        {
+            color: @contentColor;
+            font-family: @contentFont;
+            font-size: 13px;
+            font-weight: 300;
+            letter-spacing: 0.25px;
+            line-height: 24px;
+            border-top: 1px solid @borderColor !important;
+        }
+    }
+}
+.knot-accordion-two
+{
+    .panel
+    {
+        margin-top: 0px !important;
+        border-top: 1px solid transparent !important;
+        .panel-heading
+        {
+            background-color: transparent;
+        }
+        .panel-body
+        {
+            border-top: 1px solid transparent !important;
+            padding-top: 0px;
+        }
+        &:first-child
+        {
+            border-top: 1px solid @borderColor !important;
+        }
+    }
+}

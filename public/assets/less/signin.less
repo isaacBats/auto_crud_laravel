@@ -1,0 +1,398 @@
+@import 'variables.less';
+
+
+/*******************   Contents    *******************
+*  
+*  1. Sign In, Sign Up and Forgot Password
+*  2. Lockscreen
+*  3. Error Page
+---------------------------------------------------------------------------------------------- */
+
+
+
+/*   Sign In, Sign Up and Forgot Password
+---------------------------------------------------------------------------------------------- */
+.signinbg
+{
+    background: url(../images/signinbg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 50%;
+    &.signupbg
+    {
+        background: url(../images/signupbg.jpg);
+        background-position: left top;
+    }
+    &.forgot-bg
+    {
+        background: url(../images/forgotpassword.jpg);
+        background-position: center center;
+    }
+}
+.signinparent
+{
+    width: 400px;
+    display: table;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    .signin
+    {
+        background-color: #ffffff;
+        border: 1px solid @borderColor;
+        -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1);
+        -moz-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1);
+        box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1);
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: table;
+        width: 100%;
+        .signin-image
+        {
+            width: 100px;
+            height: 100px;
+            display: block;
+            margin: 0 auto;
+            img
+            {
+                width: 100%;
+                height: auto;
+                border-radius: 50%;
+                border: 2px solid @borderColor;
+            }
+        }
+        .signin-head
+        {
+            padding-top: 10px;
+            color: @headingColor;
+            font-family: @headingFont;
+            font-size: 22px;
+            font-weight: 500;
+            letter-spacing: 0.25px;
+            text-transform: uppercase;
+            text-align: center;
+            &.signin-alt
+            {
+                color: @primaryColor;
+                font-size: 18px;
+                font-weight: 500;
+                text-transform: none;
+            }
+        }
+        .signin-form
+        { 
+            padding: 0px 30px;
+            .signin-enter
+            {
+                margin-bottom: 20px;
+                margin-top: 20px;
+                >label
+                {
+                    color: @contentColor;
+                    font-family: @contentFont;
+                    font-size: 14px;
+                    font-weight: 400;
+                    letter-spacing: 0.25px;
+                    text-transform: capitalize;
+                    margin-bottom: 0px;
+                }
+                .signin-input
+                {
+                    border: 0px;
+                    border-bottom: 2px solid @borderColor;
+                    background-color: transparent;
+                    color: @contentColor;
+                    font-family: @contentFont;
+                    font-size: 14px;
+                    font-weight: 400;
+                    letter-spacing: 0.25px;
+                    &:focus
+                    {
+                        border: 0px;
+                        border-bottom: 2px solid @primaryColor;
+                    }
+                    &.signin-error
+                    {
+                        border-bottom: 2px solid @danger;
+                        margin-bottom: 10px;
+                    }
+                }
+                .error
+                {
+                    color: @contentColor;
+                    font-family: @contentFont;
+                    font-size: 14px;
+                    font-weight: 400;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+    .sign-up
+    {
+        background-color: #ffffff;
+        border: 1px solid @borderColor;
+        text-align: center;
+        margin-top: 15px;
+        padding: 10px;
+        -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1);
+        -moz-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1);
+        box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1);
+        a
+        {
+            color: @primaryColor;
+            font-family: @contentFont;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.25px;
+            text-decoration: none;
+            text-transform: capitalize;
+            &:hover
+            {
+                color: lighten(@primaryColor,10%);
+            }
+        }
+    }
+}
+@media (max-width:450px)
+{
+    .signinparent
+    {
+        width: 320px;
+    }
+}
+
+
+
+/*   Lock Screen
+---------------------------------------------------------------------------------------------- */
+.lockscreen-bg
+{
+    background-color: #374046;
+    width: 100%;
+    height: 100%;
+    .lockscreen
+    {
+        width: 420px;
+        display: table;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        .lockscreen-image
+        {
+            width: 100px;
+            height: 100px;
+            float: left;
+            img
+            {
+                width: 100%;
+                height: auto;
+                border-radius: 6px;
+                border: 2px solid #ffffff;
+            }
+        }
+        .lockscreen-details
+        {
+            margin-left: 120px;
+            .lockscreen-user
+            {
+                margin-top: 10px;
+                color: #fafafa;
+                font-family: @headingFont;
+                font-size: 22px;
+                font-weight: 500;
+                letter-spacing: 0.25px;
+                text-transform: uppercase;
+                text-align: left;
+            }
+            .lockscreen-input
+            {
+                margin-top: 5px;
+                border: 0px;
+                border-bottom: 2px solid @borderColor;
+                background-color: #374046;
+                color: #fafafa;
+                font-family: @contentFont;
+                font-size: 14px;
+                font-weight: 400;
+                letter-spacing: 0.25px;
+                &:focus
+                {
+                    border: 0px;
+                    border-bottom: 2px solid @primaryColor;
+                }
+            }
+        }
+    }
+}
+.lockscreen-bottom
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: block;
+    .lockscreen-icons
+    {
+        padding-left: 20px;
+        padding-bottom: 20px;
+        li
+        {
+            padding-left: 10px;
+            padding-right: 10px;
+            a
+            {
+                color: #ffffff;
+                font-family: @contentFont;
+                font-size: 24px;
+                font-weight: 400;
+                letter-spacing: 0.25px;
+                text-transform: uppercase;
+                text-decoration: none;
+                i
+                {
+                    padding-right: 10px;
+                    vertical-align: middle;
+                }
+                span
+                {
+                    font-size: 12px;
+                    padding: 3px;
+                    border: 1px solid #ffffff;
+                    border-radius: 50%;
+                    vertical-align: super;
+                    background-color: #374046;
+                }
+                &:hover
+                {
+                    i
+                    {
+                        color: @primaryColor;
+                        -webkit-transition: all 0.5s ease;
+                        -moz-transition: all 0.5s ease;
+                        transition: all 0.5s ease;
+                    }
+                    span
+                    {
+                        background-color: @primaryColor;
+                        -webkit-transition: all 0.5s ease;
+                        -moz-transition: all 0.5s ease;
+                        transition: all 0.5s ease;
+                    }
+                }
+            }
+            &.lockscreen-icon-right
+            {
+                float: right;
+            }
+        }
+    }
+}
+@media (max-width:470px)
+{
+    .lockscreen-bg
+    {
+        .lockscreen
+        {
+            width: 320px;
+        }
+    }
+}
+
+
+
+/*   Error Page
+---------------------------------------------------------------------------------------------- */
+.error-bg
+{
+    background-color: #133044;
+    width: 100%;
+    height: 100%;
+    &.error-bg-two
+    {
+        background-color: transparent;
+    }
+}
+.error-block
+{
+    display: table;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    .error-head
+    {
+        color: #ffffff;
+        font-family: @headingFont;
+        font-size: 24px;
+        font-weight: 600;
+        letter-spacing: 0.25px;
+        text-transform: capitalize;
+        text-align: center;
+        padding-bottom: 40px;
+        &.error-head-two
+        {
+            color: @headingColor;
+        }
+    }
+    .error-image
+    {
+        width: 450px;
+        height: 100px;
+        display: table;
+        margin: 0 auto;
+        img
+        {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .error-link
+    {
+        padding-top: 40px;
+        display: block;
+        color: @primaryColor;
+        font-family: @contentFont;
+        font-size: 18px;
+        ont-weight: 600;
+        letter-spacing: 0.25px;
+        text-transform: capitalize;
+        text-align: center;
+        text-decoration: none;
+        &:hover
+        {
+            color: lighten(@primaryColor,10%);
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+    }
+    .error-btn
+    {
+        margin-top: 40px;
+    }
+}
+@media (max-width:479px)
+{
+    .error
+    {
+        .error-image
+        {
+            width: 320px;
+        }
+    }
+}

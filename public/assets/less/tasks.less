@@ -1,0 +1,112 @@
+@import 'variables.less';
+
+.tasks-block
+{
+
+	.input-group
+	{
+		height: 10px;
+		.save 
+		{
+			background-color: @success;
+			height: 20px;
+			border-width: 0;
+		}
+		.cancel
+		{
+			background-color: @warning;
+			height: 20px;
+			border-width: 0;
+		}
+		input 
+		{
+			border-width: 0;
+		}
+	}
+	.panel
+	{
+		border-radius: 0;
+	}
+	.panel-heading
+	{
+		color: #FFFFFF;
+		border-bottom-width: 0;	
+		border-radius: 0;
+		padding: 15px 15px; 
+		a 
+		{
+			color: #FFFFFF;
+			line-height: 0;			
+		}
+	}
+	.list-group
+	{		
+		li 
+		{
+			margin-bottom: 5px;
+			border-radius: 0;			
+		}
+		a 
+		{
+			text-decoration: none;
+		}
+	}
+	.panel-danger
+	{
+		border-color: lighten(@danger,20%);						
+		.panel-heading
+		{
+			background-color: @danger;						
+		}
+		.list-group
+		{
+			li 
+			{
+				background-color: lighten(@danger,33%);
+				border-color: lighten(@danger,25%);
+				color: darken(@danger,8%);														
+			}	
+		}		
+	}
+	.panel-success
+	{		
+		border-color: lighten(@success,5%);
+		.panel-heading
+		{
+			background-color: @success;
+		}	
+		.list-group
+		{
+			li 
+			{
+				background-color: lighten(@success,45%);
+				border-color: lighten(@success,12%);
+				color: darken(@success,8%);
+			}	
+		}	
+	}
+	.panel-warning
+	{
+		border-color: lighten(@warning,5%);
+		.panel-heading
+		{
+			background-color: @warning;
+		}
+		.list-group
+		{
+			li 
+			{
+				background-color: lighten(@warning,39%);
+				border-color: lighten(@warning,20%);
+				color: darken(@warning,8%);
+			}	
+		}	
+	}
+	.new-item-header
+	{
+		a 
+		{
+			font-size: 20px;
+		}
+	}
+}

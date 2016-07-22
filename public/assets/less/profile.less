@@ -1,0 +1,492 @@
+@import 'variables.less';
+
+
+/*******************   Contents    *******************
+*  
+*  1. Profile Userbar
+*  2. Profile
+*  3. Profile Sidebar
+---------------------------------------------------------------------------------------------- */
+
+
+
+/*   Profile Userbar
+---------------------------------------------------------------------------------------------- */
+.profile-userbar
+{
+    .profile-user
+    {
+        background-color: @mainBg;
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 40px 0px;
+        .profile-image
+        {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 10px;
+            img
+            {
+                width: 100%;
+                height: auto;
+                border-radius: 4px;
+            }
+        }
+        .profile-name
+        {
+            color: @headingColor;
+            font-family: @headingFont;
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 0.25px;
+            text-transform: capitalize;
+            text-decoration: none;
+            &:hover
+            {
+                color: @primaryColor;
+                transition: all 0.3s ease;
+                -moz-transition: all 0.3s ease;
+                -webkit-transition: all 0.3s ease; 
+            }
+        }
+        .profile-designation
+        {
+            color: @contentColor;
+            font-family: @contentFont;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.25px;
+            text-transform: capitalize;
+            padding-bottom: 4px;
+            padding-top: 4px;
+        }
+        .profile-location
+        {
+            color: @primaryColor;
+            font-family: @contentFont;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.25px;
+            text-transform: capitalize;
+            i
+            {
+                font-size: 18px;
+                padding-right: 10px;
+            }
+        }
+    }
+    .profile-menu
+    {
+        display: block;
+        width: 100%;
+        padding: 20px;
+        .profile-menu-title
+        {
+            color: @headingColor;
+            font-family: @headingFont;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 0.25px;
+            text-transform: capitalize;
+        }
+        .profile-menu-items
+        {
+            padding-left: 10px;
+            padding-top: 10px;
+            li
+            {
+                a
+                {
+                    color: @contentColor;
+                    font-family: @contentFont;
+                    font-size: 14px;
+                    font-weight: 400;
+                    letter-spacing: 0.25px;
+                    text-transform: capitalize;
+                    text-decoration: none;
+                    i
+                    {
+                        font-size: 18px;
+                        width: 30px;
+                        padding-right: 10px;
+                        padding-bottom: 15px;
+                    }
+                    &:hover
+                    {
+                        color: @primaryColor;
+                        transition: all 0.3s ease;
+                        -moz-transition: all 0.3s ease;
+                        -webkit-transition: all 0.3s ease; 
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/*   Profile
+---------------------------------------------------------------------------------------------- */
+.profile-border
+{
+    border-left: 1px solid @borderColor;
+    border-right: 1px solid @borderColor;
+    padding: 0px 30px;
+}
+.profile-breadcrumb
+{
+    background-color: #ffffff;
+    border: 1px solid @borderColor;
+    margin: 0px 0px 10px;
+    li
+    {
+        color: @headingColor;
+        font-family: @contentFont;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 0.25px;
+        text-transform: capitalize;
+        text-align: center;
+        width: 24%;
+        border-right: 1px solid @borderColor;
+        margin: 15px 0px;
+        .profile-breadcrumb-value
+        {
+            color: @contentColor;
+            font-size: 14px;
+            font-weight: 600;
+            padding-top: 10px;
+        }
+        &:last-child
+        {
+            border-right-width: 0px;
+        }
+    }
+}
+.profile-status
+{
+    .profile-type
+    {
+        margin: 0px;
+        li
+        {
+            border: 1px solid @borderColor;
+            border-bottom: 0px;
+            padding: 0px;
+            a
+            {
+                i
+                {
+                    color: @contentColor;
+                    font-size: 14px;
+                    padding: 5px 10px;
+                }
+                &.active
+                {
+                    i
+                    {
+                        color: @primaryColor;
+                        background-color: @mainBg;
+                    }
+                }
+                &:hover
+                {
+                    i
+                    {
+                        background-color: @mainBg;
+                        transition: all 0.3s ease;
+                        -moz-transition: all 0.3s ease;
+                        -webkit-transition: all 0.3s ease; 
+                    }
+                }
+            }
+        }
+    }
+    .profile-share
+    {
+        display: block;
+        float: right;
+        margin-top: -15px;
+    }
+    .profile-post
+    {
+        margin-top: 20px;
+        .profile-post-header
+        {
+            border: 1px solid @borderColor;
+            padding: 10px;
+            background-color: #ffffff;
+            .profile-post-img
+            {
+                width: 35px;
+                height: 35px;
+                float: left;
+                margin-right: 10px;
+                background-color: @mainBg;
+                img
+                {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .profile-post-time
+            {
+                color: @headingColor;
+                font-family: @contentFont;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 24px;
+                letter-spacing: 0.25px;
+                padding-left: 10px;
+            }
+            .profile-post-share
+            {
+                color: @contentColor;
+                font-family: @contentFont;
+                font-weight: 400;
+                font-size: 14px;
+                letter-spacing: 0.25px;
+                margin-left: 45px;
+                a
+                {
+                    color: @primaryColor;
+                    font-size: 16px;
+                    text-transform: capitalize;
+                    text-decoration: none;
+                    &:hover
+                    {
+                        color: darken(@primaryColor,10%);
+                        -webkit-transition: all 0.3s ease-in-out;
+                        -moz-transition: all 0.3s ease-in-out;
+                        -o-transition: all 0.3s ease-in-out;
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+            }
+            .profile-post-via
+            {
+                color: @headingColor;
+                font-family: @contentFont;
+                font-weight: 400;
+                font-size: 12px;
+                letter-spacing: 0.25px;
+                margin-left: 45px;
+                span
+                {
+                    color: @contentColor;
+                }
+            }
+        }
+        .profile-post-body
+        {
+            padding: 15px;
+            border: 1px solid @borderColor;
+            border-top-width: 0px;
+            border-bottom-width: 0px;
+            background-color: #ffffff;
+            color: @contentColor;
+            font-family: @contentFont;
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: 0.25px;
+            line-height: 26px;
+            a
+            {
+                color: @primaryColor;
+                text-decoration: none;
+            }
+            .profile-post-body-img
+            {
+                padding-bottom: 10px;
+                a
+                {
+                    img
+                    {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+        .profile-post-footer
+        {
+            background-color: #f9fafc;
+            border: 1px solid @borderColor;
+            height: 32px;
+            margin-left: 0px;
+            >li
+            {
+                a
+                {
+                    color: @contentColor;
+                    font-family: @contentFont;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 32px;
+                    text-decoration: none;
+                    text-transform: capitalize;
+                    padding-left: 5px;
+                    padding-right: 5px;
+                    i
+                    {
+                        color: @headingColor;
+                    }
+                    &:hover
+                    {
+                        color: @primaryColor;
+                        -webkit-transition: all 0.3s ease-in-out;
+                        -moz-transition: all 0.3s ease-in-out;
+                        -o-transition: all 0.3s ease-in-out;
+                        transition: all 0.3s ease-in-out;
+                        i
+                        {
+                            color: @primaryColor;
+                            -webkit-transition: all 0.3s ease-in-out;
+                            -moz-transition: all 0.3s ease-in-out;
+                            -o-transition: all 0.3s ease-in-out;
+                            transition: all 0.3s ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.profile-load
+{
+    margin: 25px 0px;
+}
+@media (max-width:400px)
+{
+    .profile-breadcrumb
+    {
+        li
+        {
+            border: 0px;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+/*   Profile Sidebar
+---------------------------------------------------------------------------------------------- */
+.profile-sidebar
+{
+    .profile-comment
+    {
+        padding-bottom: 10px;
+        padding-top: 10px;
+        border-bottom: 1px solid @borderColor;
+        .profile-sidebar-image
+        {
+            width: 40px;
+            height: 40px;
+            float: left;
+            margin-right: 10px;
+            img
+            {
+                width: 100%;
+                height: auto;
+                border-radius: 4px;
+            }
+        }
+        .profile-notif
+        {
+            color: @contentColor;
+            font-family: @contentFont;
+            font-size: 13px;
+            font-weight: 400;
+            letter-spacing: 0.25px;
+            text-transform: capitalize;
+            margin-left: 50px;
+            display: block;
+            a
+            {
+                color: @headingColor;
+                font-size: 14px;
+                font-weight: 600;
+                text-decoration: none;
+                &:hover
+                {
+                    color: @primaryColor;
+                    transition: all 0.3s ease;
+                    -moz-transition: all 0.3s ease;
+                    -webkit-transition: all 0.3s ease; 
+                }
+            }
+            .profile-time
+            {
+                color: @headingColor;
+                font-size: 12px;
+                text-transform: none;
+                font-weight: 600;
+                padding-top: 6px;
+            }
+        }
+    }
+    .profile-chat
+    {
+        padding: 10px;
+        padding-left: 0px;
+        .profile-chat-title
+        {
+            color: @headingColor;
+            font-family: @contentFont;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 0.25px;
+            text-transform: capitalize;
+        }
+        .profile-chat-items
+        {
+            padding-top: 15px;
+            li
+            {
+                padding-left: 10px;
+                padding-bottom: 10px;
+                a
+                {
+                    color: @contentColor;
+                    font-family: @contentFont;
+                    font-size: 13px;
+                    font-weight: 600;
+                    letter-spacing: 0.25px;
+                    text-transform: capitalize;
+                    text-decoration: none;
+                    &:hover
+                    {
+                        color: @headingColor;
+                        font-weight: 600;
+                        transition: all 0.3s ease;
+                        -moz-transition: all 0.3s ease;
+                        -webkit-transition: all 0.3s ease;
+                    }
+                }
+                i
+                {
+                    font-size: 14px;
+                    float: right;
+                    &.profile-online
+                    {
+                        color: #4CAF50;
+                    }
+                    &.profile-offline
+                    {
+                        color: #B6B6B6;
+                    }
+                    &.profile-busy
+                    {
+                        color: #F44336;
+                    }
+                    &.profile-away
+                    {
+                        color: #FFC107;
+                    }
+                }
+            }
+        }
+    }
+}

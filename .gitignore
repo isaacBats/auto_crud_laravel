@@ -1,0 +1,9 @@
+
+#Vendor 
+vendor
+
+#environments
+.env
+
+#phpintel
+.phpintel

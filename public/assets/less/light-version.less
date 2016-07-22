@@ -1,0 +1,260 @@
+
+@import 'variables.less';
+
+
+@lightVersionBorderColor : #d7d7d7;
+@lightVersionContentColor : #8590A6;
+
+
+/*   Left Sidebar Light version
+---------------------------------------------------------------------------------------------- */
+
+.left-sidebar.light-version
+{
+	background-color: #FFFFFF !important;
+	border-right: 1px solid darken(#F9FAFC,10%) !important; 
+	.avatar-block
+	{
+		background-color: #FFFFFF !important;
+
+		h3
+		{
+			color: #8590A6 !important;            
+		}
+		h6
+		{
+			color: #8590A6 !important;            
+		}
+		p
+		{                    
+			color: #8590A6 !important;            
+		}
+		.edit 
+		{                       
+			color: #8590A6 !important;
+		}
+	}	
+	.avtar-settings
+	{            
+		ul
+		{
+			padding: 20px;        
+			li 
+			{
+				border-bottom: 1px solid #d7d7d7 !important;				
+				a 
+				{
+					color: #8590A6 !important;
+					color: red !important;					
+				}
+			}
+		}
+	}
+	.left-sidebar-menu
+	{        
+		>li 
+		{
+			&:before
+			{
+				background-color:#f2f2f2 !important;                        
+			}
+			&:hover, &.active
+			{
+				cursor: pointer;
+				&:before
+				{
+					width: 100%;          
+				}
+				a 
+				{
+					i 
+					{
+						color: #FFFFFF;
+					}
+				}
+			}
+			a 
+			{        
+				text-decoration: none;                
+				color: #8590A6 !important;
+				i 
+				{                    
+					color: grey !important;                              
+				}
+			}
+
+		}
+		.submenu
+		{            
+			ul 
+			{   
+				border-top: 1px solid #eeeeee !important;              
+				border-bottom: 1px solid #eeeeee !important;              
+				background-color: #fbfbfb !important; 
+				ul 
+				{
+					background-color: darken(#fbfbfb,2%) !important; 
+					ul 
+					{
+						background-color: darken(#fbfbfb,8%) !important; 
+					}
+				}                
+				&:before
+				{                    
+					background-color: #dadce2 !important; 
+				}           
+				li 
+				{
+					a 
+					{
+						color: #31323b !important;                        
+						&:hover
+						{
+							color: #FFFFFF;
+						}
+						&:after
+						{                            
+							background-color: #dadce2 !important; 
+						}
+					}
+					&.active
+					{
+						a { color: #FFFFFF; }
+					}
+				}                
+			}
+			.menu-chevron
+			{
+				position: absolute;        
+				text-align: right;        
+				color: #8590A6;
+				display: inline-block;
+				right: 20px;
+				font-size: 10px;
+			}              
+		}
+	}	
+
+} 	
+
+/*   Right sidebar light version
+---------------------------------------------------------------------------------------------- */
+
+.light-version
+{
+	&.right-sidebar
+	{
+		background-color: #FFFFFF !important;
+		.right-header
+		{
+			background-color: #f9f9f9 !important;
+			.close-rightsidebar
+			{				
+				color: @primaryColor  !important;    				
+			}			
+		}
+		.right-sidebar-tab
+		{			
+			.nav-tabs>li>a
+			{
+				color: @primaryColor;				
+				.ion-cube
+				{
+					color: #2196f3;
+				}
+
+				.ion-paintbucket
+				{
+					color: #FC6042;
+				}
+
+				.ion-person-stalker
+				{
+					  color: #D98B3A;
+				}
+
+
+			}
+			.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover
+			{				
+				color: #FFFFFF !important;	
+				i
+				{
+					color: #FFFFFF !important;	
+				}			
+			}        
+		}
+		.contacts-list
+		{       
+			.list-group-item
+			{				
+				a 
+				{					
+					border-bottom: 1px solid darken(#FFFFFF,6%) !important;                      					
+					&:hover
+					{
+						span.name
+						{
+							color: @primaryColor;   
+						}
+
+					}                               
+				}   
+				span.name
+				{					
+					color: @contentColor !important;					       
+				}
+			}			
+
+		}
+		.knot-accordion 
+		{
+			.collapsed
+			{
+
+				i.ti-angle-down:before
+				{
+					content: "\e649" !important;
+				}	
+			}
+
+			.panel .panel-heading .panel-title a
+			{
+				color: @headingColor !important;				
+			}
+			.panel-body
+			{
+				background-color: #FFFFFF !important;							
+			}
+			.panel-default
+			{
+				background-color: #f9f9f9;
+				border-width: 0;
+				margin-top: 10px;  
+			}			
+			.info-head
+			{
+				color: @headingColor !important;				
+			}			
+		}		
+		.settings
+		{
+			margin-top: 20px;
+			.toggle-switch
+			{
+				margin-bottom: 10px;
+				display: table;
+				width: 100%;
+			}
+			label 
+			{
+				color: @headingColor !important;
+				font-family: @contentFont;
+				font-size: 12px;
+			}
+		}
+
+	}
+}
+
+

@@ -1,0 +1,300 @@
+
+/****************************************************
+                    Wysiwig
+****************************************************/
+
+.mce-content-body 
+{
+	p
+	{
+		color: @contentColor;
+		font-family: @contentFont;
+		font-size: 14px;
+		font-weight: 300;
+	}
+}
+.mce-popover
+{
+	.mce-arrow
+	{
+		&:after
+		{
+			border-bottom-color: red;
+		}
+	}
+	.mce-colorbutton-grid
+	{
+		margin: 0px;
+		border: 1px solid darken(@borderColor,10%) !important;
+		padding: 4px;
+	}
+}
+.mce-reset
+{
+	.mce-window-head
+	{
+		border-bottom: 1px solid darken(@borderColor,10%);
+		.mce-title
+		{
+			color: @headingColor;
+			font-family: @contentFont;
+			font-size: 16px;
+			font-weight: 400;
+		}
+	}
+	.mce-textbox
+	{
+		border-radius: 0px;
+		box-shadow: none;
+		outline: 0;
+		border-color: darken(@borderColor,10%);
+		height: 30px;
+		font-weight: 300;
+		line-height: 30px;
+		color: lighten(@borderColor,5%);
+		font-size: 14px;
+		font-family: @contentFont;
+		&:focus
+		{
+			box-shadow: none;
+			border-color: @primaryColor;
+		}
+	}
+	.mce-checkbox
+	{
+		.mce-ico
+		{
+			background-image: none;
+			background-color: #ffffff;
+			border-radius: 0px;
+			border: 1px solid darken(@borderColor,10%);
+		}
+		.mce-label
+		{
+			color: @headingColor;
+			font-family: @contentFont;
+			font-size: 12px;
+			font-weight: 400;
+		}
+	}
+}
+.mce-container
+{
+
+	border-radius: 0px !important;
+	border-width: 0px !important;
+	.mce-menubar
+	{
+		background-color: lighten(@borderColor,5%) !important;
+		border: 1px solid darken(@borderColor,10%) !important;
+		padding: 2px;
+		.mce-btn
+		{
+			button
+			{
+				span
+				{
+					color: @headingColor;
+					font-family: @contentFont;
+					font-size: 14px;
+					font-weight: 400;
+					text-transform: capitalize;
+				}
+				.mce-caret
+				{
+					border-top-color: @headingColor;
+				}
+				&:hover
+				{
+					background-color: @borderColor;
+				}
+			}
+			&.mce-active
+			{
+				button
+				{
+					background-color: @borderColor;
+				}
+			}
+		}
+	}
+	.mce-btn
+	{
+		background-color: darken(@borderColor,10%);
+		background-image: none;
+		outline: 0;
+		border: 0px;
+		border-radius: 0px;
+		button
+		{
+			color: #ffffff;
+			font-family: @contentFont;
+			font-size: 14px;
+			font-weight: 400;
+			text-shadow: none;
+		}
+		&:hover
+		{
+			background-color: darken(darken(@borderColor,10%),10%);
+			background-image: none;
+		}
+	}
+	.mce-primary
+	{
+		background-color: @primaryColor;
+		background-image: none;
+		outline: 0;
+		border: 0px;
+		border-radius: 0px;
+		button
+		{
+			color: #ffffff;
+			font-family: @contentFont;
+			font-size: 14px;
+			font-weight: 400;
+			text-shadow: none;
+		}
+		&:hover
+		{
+			background-color: darken(@primaryColor,10%);
+			background-image: none;
+		}
+	}
+	.mce-toolbar-grp
+	{
+		background-color: lighten(@borderColor,5%) !important;
+		border: 1px solid darken(@borderColor,10%) !important;
+		border-top-width: 0px !important;
+		padding: 6px;
+	}
+	.mce-edit-area
+	{
+		border: 1px solid darken(@borderColor,10%) !important;
+		border-width: 0px 1px !important;
+	}
+	.mce-statusbar
+	{
+		background-color: lighten(@borderColor,5%) !important;
+		border: 1px solid darken(@borderColor,10%) !important;
+		.mce-path
+		{
+			.mce-path-item
+			{
+				color: @headingColor;
+				font-family: @contentFont;
+				font-size: 14px;
+				font-weight: 400;
+			}
+		}
+	}
+	.mce-widget
+	{
+		color: @contentColor;
+		font-family: @contentFont;
+		font-size: 14px;
+		font-weight: 400;
+		border-left: 1px solid transparent;
+	}
+	.mce-btn-group
+	{
+		border: 1px solid lighten(@borderColor,5%) !important;
+		.mce-btn
+		{
+			box-shadow: none;
+			background-image: none;
+			background-color: #ffffff;
+			border-width: 0px;
+			border-radius: 0px !important;
+			&:hover, &:focus
+			{
+				box-shadow: none;
+				background-image: none;
+				background-color: #ffffff;
+			}
+			button
+			{
+				span
+				{
+					color: @headingColor;
+					font-family: @contentFont;
+					font-size: 14px;
+					font-weight: 300;
+				}
+				.mce-caret
+				{
+					color: @headingColor;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+	.mce-ico
+	{
+		color: @headingColor;
+		font-size: 14px;
+	}
+	.mce-panel
+	{
+		background-image: none;
+	}
+	&.mce-menu
+	{
+		border: 1px solid darken(@borderColor,10%) !important;
+		.mce-menu-item
+		{
+			background-image: none;
+			.mce-ico
+			{
+				color: @primaryColor;
+				font-size: 14px;
+			}
+			.mce-text
+			{
+				color: @headingColor;
+				font-family: @contentFont;
+				font-size: 14px;
+				font-weight: 400;
+				text-transform: capitalize;
+			}
+			.mce-menu-shortcut
+			{
+				color: lighten(@contentColor,5%);
+				font-family: @contentFont;
+				font-size: 12px;
+				font-weight: 300;
+				text-transform: capitalize;
+			}
+			&:hover, &:focus, &.mce-selected
+			{
+				background-color: @primaryColor;
+				.mce-ico, .mce-text, .mce-menu-shortcut
+				{
+					color: #ffffff;
+				}
+			}
+			&.mce-disabled
+			{
+				.mce-ico, .mce-text, .mce-menu-shortcut
+				{
+					color: lighten(@contentColor,5%);
+				}
+				&:hover, &:focus, &.mce-selected
+				{
+					background-color: darken(@borderColor,10%);
+					.mce-ico, .mce-text, .mce-menu-shortcut
+					{
+						color: #ffffff;
+					}
+				}
+			}
+		}
+		.mce-menu-item-sep
+		{
+			background-color: darken(@borderColor,10%);
+			&:hover
+			{
+				background-color: darken(@borderColor,10%); 
+			}
+		}
+	}
+}

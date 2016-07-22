@@ -1,0 +1,7 @@
+<div class='btn-group'>
+    <a href="{!! route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.show', [$$MODEL_NAME_CAMEL$->id]) !!}" class="btn btn-primary"><i class="ion ion-eye"></i></a>
+    <a href="{!! route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.edit', [$$MODEL_NAME_CAMEL$->id]) !!}" class="btn btn-warning"><i class="ion ion-edit"></i></a>
+    {!! Form::open(['route' => ['$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.destroy', $$MODEL_NAME_CAMEL$->id], 'method' => 'delete']) !!}
+        {!! Form::button('<i class="ion ion-ios-trash-outline"></i>', ['type' => 'submit', 'class' => 'btn btn-danger', 'onclick' => "return confirm('Are you sure?')"]) !!}
+    {!! Form::close() !!}
+</div>

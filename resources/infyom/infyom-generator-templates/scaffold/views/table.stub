@@ -1,0 +1,26 @@
+<table class="table table-hover users-table">
+    <thead>
+        $FIELD_HEADERS$
+        <th colspan="3">Action</th>
+    </thead>
+    <tbody>
+        @foreach($$MODEL_NAME_PLURAL_CAMEL$ as $$MODEL_NAME_CAMEL$)
+            <tr class="table-row">
+                $FIELD_BODY$
+
+                <td>
+                    <a href="{!! route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.show', [$$MODEL_NAME_CAMEL$->id]) !!}" class="btn btn-primary"><i class="ion ion-eye"></i></a>
+                </td>
+                <td>
+                    <a href="{!! route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.edit', [$$MODEL_NAME_CAMEL$->id]) !!}" class="btn btn-danger  delete-row"><i class="ion ion-edit"></i></a>
+                </td>
+
+                <td>
+                    {!! Form::open(['route' => ['$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.destroy', $$MODEL_NAME_CAMEL$->id], 'method' => 'delete']) !!}
+                        {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger', 'onclick' => "return confirm('Are you sure?')"]) !!}
+                    {!! Form::close() !!}
+                </td>
+            </tr>
+        @endforeach
+  </tbody>
+</table>
