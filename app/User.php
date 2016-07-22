@@ -8,6 +8,8 @@ class User extends Authenticatable
 {
     
 
+    public $table = 'cd_users';
+
     /**
      * The attributes that are mass assignable.
      *

@@ -11,7 +11,7 @@ class Setting extends Model
 {
     use SoftDeletes;
 
-    public $table = 'settings';
+    public $table = 'cd_settings';
     
  const CREATED_AT = 'created_at';
  const UPDATED_AT = 'updated_at';
@@ -68,7 +68,7 @@ class Setting extends Model
 
     public static function get($key,$default="")
     {
-        $value = DB::table('settings')->where('key',$key)->pluck('value');
+        $value = DB::table('cd_settings')->where('key',$key)->pluck('value');
         
         return $value ? $value[0] : $default;    
     }
